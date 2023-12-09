@@ -48,6 +48,7 @@ interface ILicenseProposal {
      * @notice Allows the proposal creator to end the proposal and accept/deny the proposal
      * @param _proposal The proposalID to end
      * @param accept_deny Status to accept or deny the proposal
+     * @dev this will be called as soon as any of the assets/orgs deny the proposal
      */
     function proposalEnd(uint256 _proposal, bool accept_deny) external;
 

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.23;
+pragma solidity 0.8.19;
 
 // Story Protocol
 import {IIPOrg} from "@story/interfaces/ip-org/IIPOrg.sol";

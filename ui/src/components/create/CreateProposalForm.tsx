@@ -3,7 +3,7 @@ export default function CreateProposalForm() {
     <div className="container w-full">
       <div className="form-control max-w-xs">
         <label className="label">
-          <span className="label-text">Proposal Title</span>
+          <span className="label-text text-3xl font-anton">Proposal Title</span>
         </label>
         <input
           type="text"
@@ -16,7 +16,9 @@ export default function CreateProposalForm() {
       </div>
       <div>
         <label className="label">
-          <span className="label-text">Proposal Description</span>
+          <span className="label-text text-3xl font-anton">
+            Proposal Description
+          </span>
         </label>
         <textarea
           placeholder="My proposal is about..."
@@ -39,7 +41,7 @@ export default function CreateProposalForm() {
         </div>
         <div>
           <label className="label">
-            <span className="label-text text-lg text-white">
+            <span className="label-text text-3xl text-white font-anton">
               Distribution Channels
             </span>
           </label>

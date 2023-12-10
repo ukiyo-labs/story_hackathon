@@ -2,7 +2,10 @@
 import { IoIosRemoveCircle } from "react-icons/io";
 import useIpAssetData from "@/hook/useIpAsset";
 
-export default function AssetList() {
+export default function AssetList(props: {
+  editable: boolean;
+  status?: Array<number>;
+}) {
   return (
     <table className="table">
       <thead>
@@ -11,7 +14,7 @@ export default function AssetList() {
           <th>Name</th>
           <th>Profile</th>
           <th>License</th>
-          <th>Actions</th>
+          <th className={`${props.editable ? "block" : "hidden"}`}>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -20,18 +23,24 @@ export default function AssetList() {
           name="Asset 1"
           profile="Profile 1"
           license="License 1"
+          editable={props.editable}
+          status={props.status?.[0]}
         />
         <AssetItem
           id={202}
           name="Asset 2"
           profile="Profile 2"
+          editable={props.editable}
           license="License 2"
+          status={props.status?.[2]}
         />
         <AssetItem
           id={203}
           name="Asset 3"
+          editable={props.editable}
           profile="Profile 3"
           license="License 3"
+          status={props.status?.[1]}
         />
       </tbody>
     </table>
@@ -42,6 +51,8 @@ function AssetItem(props: {
   name: string;
   profile: string;
   license: string;
+  editable?: boolean;
+  status?: number;
 }) {
   const { ipAssetData } = useIpAssetData(props.id);
 
@@ -67,9 +78,22 @@ function AssetItem(props: {
       </td>
       <td>{ipAssetData?.asset?.licenseId ?? "Unlicensed"}</td>
       <td>
-        <button className="btn btn-primary">
+        <button
+          className={`btn btn-primary ${props.editable ? "block" : "hidden"}`}
+        >
           <IoIosRemoveCircle />
         </button>
+      </td>
+      <td
+        className={`${
+          isNaN(parseInt(props.status?.toString() ?? "x")) ? "hidden" : ""
+        } font-anton`}
+      >
+        {props.status == 1
+          ? "Approved"
+          : props.status == 2
+          ? "PENDING"
+          : "Rejected"}
       </td>
     </tr>
   );

@@ -154,6 +154,7 @@ contract LicenseProposal is ILicenseProposal {
             asset_proposals[count] = i;
             count++;
         }
+        return asset_proposals;
     }
 
     function orgAssetProposalIndex(
@@ -170,7 +171,10 @@ contract LicenseProposal is ILicenseProposal {
         return type(uint256).max;
     }
 
-    function userProposals(address _user, bool isPending) external view {
+    function userProposals(
+        address _user,
+        bool isPending
+    ) external view returns (uint[] memory) {
         uint length = proposalCount + 1;
         uint[] memory user_proposals = new uint[](length);
         uint count = 0;
@@ -181,5 +185,6 @@ contract LicenseProposal is ILicenseProposal {
             user_proposals[count] = i;
             count++;
         }
+        return user_proposals;
     }
 }

@@ -35,6 +35,8 @@ contract LicenseProposal is ILicenseProposal {
         uint[] calldata _asset_ids,
         uint _endTime
     ) external {
+        // @todo revisar si los IPAssets tienen una licencia asociada
+        // @todo si la licencia es recíproca, debería de fallar
         proposalCount++;
         uint length = _asset_ids.length;
         ORG_ASSET_VOTE[] memory votes = new ORG_ASSET_VOTE[](length);
@@ -110,6 +112,12 @@ contract LicenseProposal is ILicenseProposal {
             emit ProposalDenied(_proposal);
         }
         proposal.over = true;
+    }
+
+    function createLicenses(uint256 proposal) private {
+        //1. Create IPOrg
+        //2. Create Assets for IPOrg and make them match the proposal Assets
+        //3. Create Licenses for IPOrg
     }
 
     //-----------------------------------------------------------------

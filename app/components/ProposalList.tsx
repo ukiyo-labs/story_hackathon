@@ -1,4 +1,5 @@
 import { ProposalListItem } from "./ProposaListItem";
+import React from 'react';
 export default function ProposalList() {
   return (
     <div className="py-2 w-full container">

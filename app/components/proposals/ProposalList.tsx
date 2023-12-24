@@ -1,3 +1,4 @@
+import React from 'react';
 import { ProposalListItem } from "./ProposaListItem";
 export default function ProposalList() {
   return (

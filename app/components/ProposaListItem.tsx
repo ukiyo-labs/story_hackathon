@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { useState } from "react";
 import { IoMdThumbsDown, IoMdThumbsUp } from "react-icons/io";
 

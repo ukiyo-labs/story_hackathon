@@ -1,14 +1,21 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { useSignMessage } from 'wagmi';
 
+interface DistributionChannels {
+  television: boolean;
+  video: boolean;
+  books: boolean;
+  email: boolean;
+}
+
 export default function CreateProposalForm() {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [derivatives, setDerivatives] = useState(false);
-  const [attributions, setAttributions] = useState(false);
-  const [distributionChannels, setDistributionChannels] = useState({
+  const [title, setTitle] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
+  const [derivatives, setDerivatives] = useState<boolean>(false);
+  const [attributions, setAttributions] = useState<boolean>(false);
+  const [distributionChannels, setDistributionChannels] = useState<DistributionChannels>({
     television: false,
     video: false,
     books: false,
@@ -17,16 +24,18 @@ export default function CreateProposalForm() {
 
   const { signMessage } = useSignMessage();
 
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
     if (['television', 'video', 'books', 'email'].includes(name)) {
       setDistributionChannels(prev => ({ ...prev, [name]: checked }));
-    } else {
-      name === 'derivatives' ? setDerivatives(checked) : setAttributions(checked);
+    } else if (name === 'derivatives') {
+      setDerivatives(checked);
+    } else if (name === 'attributions') {
+      setAttributions(checked);
     }
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       const message = `Title: ${title}, Description: ${description}, Derivatives: ${derivatives}, Attributions: ${attributions}, Distribution Channels: ${JSON.stringify(distributionChannels)}`;

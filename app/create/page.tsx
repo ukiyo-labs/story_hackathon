@@ -1,5 +1,6 @@
 import AssetList from "@/components/create/AssetList";
 import CreateProposalForm from "@/components/create/CreateProposalForm";
+import { useSignMessage, usePrepareSendTransaction, useSendTransaction } from 'wagmi';
 
 export default function CreatePage() {
   return (

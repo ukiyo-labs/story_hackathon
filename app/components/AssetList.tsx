@@ -92,7 +92,7 @@ function AssetItem(props: {
         {props.status == 1
           ? "Approved"
           : props.status == 2
-          ? "PENDING"
+          ? "Pending"
           : "Rejected"}
       </td>
     </tr>

@@ -15,45 +15,13 @@ export default function ProposalPage() {
         </label>
       </div>
       <p className="whitespace-pre-wrap container px-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Orci sagittis eu
-        volutpat odio facilisis mauris sit amet. Eget nunc scelerisque viverra
-        mauris in aliquam. Nunc vel risus commodo viverra maecenas accumsan
-        lacus vel facilisis. Nunc vel risus commodo viverra maecenas accumsan
-        lacus vel facilisis. Urna et pharetra pharetra massa massa ultricies mi.
-        Elit scelerisque mauris pellentesque pulvinar pellentesque habitant.
-        Morbi tincidunt ornare massa eget egestas. Fringilla est ullamcorper
-        eget nulla facilisi etiam dignissim diam. Mollis aliquam ut porttitor
-        leo a diam. Ultricies mi quis hendrerit dolor magna eget est lorem
-        ipsum. Ac turpis egestas sed tempus urna. A condimentum vitae sapien
-        pellentesque habitant morbi tristique senectus.
+      IPSwap is a proof of concept built by ukiyo on Story Protocol. A primary and secondary marketplace for Intellectual Property where creatives, influencers, studios, and financiers converge to revolutionize how intellectual property licenses are traded. From movie scripts and unique characters to captivating artwork and entrancing music, IPSwap is the beating heart of the creator economy.
         {"\n"}
         {"\n"}
-        Elementum nisi quis eleifend quam adipiscing vitae proin. Eu ultrices
-        vitae auctor eu augue. Nullam vehicula ipsum a arcu cursus vitae congue
-        mauris rhoncus. Mattis pellentesque id nibh tortor id aliquet lectus.
-        Est ante in nibh mauris cursus. In cursus turpis massa tincidunt dui ut
-        ornare lectus sit. Bibendum neque egestas congue quisque egestas diam.
-        Iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Est
-        lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque.
-        Nullam vehicula ipsum a arcu. Risus pretium quam vulputate dignissim
-        suspendisse in est ante in. Fames ac turpis egestas sed tempus urna et
-        pharetra pharetra. Sit amet consectetur adipiscing elit pellentesque
-        habitant morbi tristique. Etiam erat velit scelerisque in dictum non
-        consectetur a. Ac turpis egestas sed tempus urna et pharetra pharetra.
+        IPSwap enables Creators gain unprecedented access to a global audience, while fans experience a deeper connection with the stories they love. Everyone contributes, everyone benefits. From a teenage enthusiast in South America to the Far East, adding their unique character to a franchise, or to a seasoned Hollywood writer penning the next big chapter - all find their place and reward in the IPSwap ecosystem.
         {"\n"}
         {"\n"}
-        Facilisis sed odio morbi quis. In fermentum et sollicitudin ac orci.
-        Nisl suscipit adipiscing bibendum est ultricies. Consectetur libero id
-        faucibus nisl tincidunt. Netus et malesuada fames ac turpis egestas sed
-        tempus. Pulvinar elementum integer enim neque volutpat. Ut pharetra sit
-        amet aliquam id diam maecenas ultricies. Libero nunc consequat interdum
-        varius sit amet mattis vulputate enim. Tortor condimentum lacinia quis
-        vel eros donec ac odio. Ac tortor dignissim convallis aenean et tortor
-        at risus viverra. Elementum tempus egestas sed sed risus pretium quam
-        vulputate. Tellus cras adipiscing enim eu turpis. Ut porttitor leo a
-        diam sollicitudin tempor id. Tempus egestas sed sed risus pretium quam
-        vulputate.
+        NOTE: This a testnet version of IPSwap. Core funtionalities are not yet able due to the nature of resource availabilty. As we aim for a Q3-Q4 2024 launch, this is your first step into a gateway of being a part of this exciting journey. As we build and refine, your feedback and participation are invaluable. Together, we're not just creating content; we're worldbuilding and shaping the human imagination through a process of redefinition of creation and collaboration in the digital age.
       </p>
       <div className="container py-6">
         <h3 className="text-4xl font-anton pb-4">Concept Examples</h3>

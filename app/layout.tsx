@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Anton } from "next/font/google";
-import "./globals.css";
+import './globals.css'; // Adjust the path as needed
 import { Providers } from "./Providers";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -39,7 +39,7 @@ function Header() {
   return (
     <header className="flex flex-row items-center justify-between py-2 px-4 font-anton bg-slate-700">
       <div>
-        <p className="text-4xl font-bold">IP Merger</p>
+        <p className="text-4xl font-bold">IPSwap</p>
       </div>
       <nav>
         <Link className="btn btn-link text-xl text-primary" href="/">
@@ -51,6 +51,10 @@ function Header() {
         <Link className="btn btn-link text-xl text-primary" href="/proposal">
           Proposal
         </Link>
+        {/* Adding the Explorer link */}
+        <a className="btn btn-link text-xl text-primary" href="https://sp-explorer.vercel.app" target="_blank" rel="noopener noreferrer">
+          Explorer
+        </a>
       </nav>
       <div>
         <ConnectKitButton />

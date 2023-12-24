@@ -1,10 +1,10 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/create/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/proposal/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -13,15 +13,14 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      fontFamily:{
+      fontFamily: {
         inter: ["var(--font-inter)"],
         anton: ["var(--font-anton)"],
-      }
+      },
     },
   },
   plugins: [require("daisyui")],
-  daisyui:{
-    base: false,
-  }
-}
-export default config
+  daisyui: true, // Include base styles
+};
+
+export default config;

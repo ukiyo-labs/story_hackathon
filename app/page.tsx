@@ -1,4 +1,6 @@
-import ProposalList from "@/components/proposals/ProposalList";
+"use client";
+
+import ProposalList from "@/components/ProposalList";
 import Image from "next/image";
 
 export default function Home() {

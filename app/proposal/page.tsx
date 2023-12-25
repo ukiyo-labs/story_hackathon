@@ -15,13 +15,13 @@ export default function ProposalPage() {
         </label>
       </div>
       <p className="whitespace-pre-wrap container px-4">
-      IPSwap is a proof of concept built by ukiyo on Story Protocol. A primary and secondary marketplace for Intellectual Property where creatives, influencers, studios, and financiers converge to revolutionize how intellectual property licenses are traded. From movie scripts and unique characters to captivating artwork and entrancing music, IPSwap is the beating heart of the creator economy.
+      IPSwap is a platform in development by ukiyo built on the Story Protocol architecture. A primary and secondary marketplace for Intellectual Property where creatives, influencers, studios, and financiers converge to revolutionize how IP licenses are transferred, owned, and monetized. From movie scripts and unique characters to captivating artwork and entrancing music, IPSwap is the beating heart of the creator economy.
         {"\n"}
         {"\n"}
         IPSwap enables Creators gain unprecedented access to a global audience, while fans experience a deeper connection with the stories they love. Everyone contributes, everyone benefits. From a teenage enthusiast in South America to the Far East, adding their unique character to a franchise, or to a seasoned Hollywood writer penning the next big chapter - all find their place and reward in the IPSwap ecosystem.
         {"\n"}
         {"\n"}
-        NOTE: This a testnet version of IPSwap. Core funtionalities are not yet able due to the nature of resource availabilty. As we aim for a Q3-Q4 2024 launch, this is your first step into a gateway of being a part of this exciting journey. As we build and refine, your feedback and participation are invaluable. Together, we're not just creating content; we're worldbuilding and shaping the human imagination through a process of redefinition of creation and collaboration in the digital age.
+        NOTE: This a proof of concept. IPSwap's core funtionalities are not readily available due resource timed launches on Story Protocol. As we aim for a Q3-Q4 2024 launch, this is your first step into a gateway of being a part of this exciting journey. As we build and refine, your feedback and participation are invaluable. Together, we're not just creating content; we're worldbuilding and shaping the human imagination through a process of redefinition of creation and collaboration in the digital age.
       </p>
       <div className="container py-6">
         <h3 className="text-4xl font-anton pb-4">Concept Examples</h3>

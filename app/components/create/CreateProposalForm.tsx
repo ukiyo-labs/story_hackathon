@@ -10,28 +10,31 @@ export default function CreateProposalForm() {
   const [attributions, setAttributions] = useState(false);
   const [distributionChannels, setDistributionChannels] = useState({
     television: false,
-    video: false,
+    movies: false,
     books: false,
-    email: false,
+    marketing: false,
   });
 
   const { signMessage } = useSignMessage();
 
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (event: any) => {
     const { name, checked } = event.target;
-    if (['television', 'video', 'books', 'email'].includes(name)) {
+    if (['television', 'movies', 'books', 'marketing'].includes(name)) {
       setDistributionChannels(prev => ({ ...prev, [name]: checked }));
     } else {
       name === 'derivatives' ? setDerivatives(checked) : setAttributions(checked);
     }
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
     try {
       const message = `Title: ${title}, Description: ${description}, Derivatives: ${derivatives}, Attributions: ${attributions}, Distribution Channels: ${JSON.stringify(distributionChannels)}`;
-      const { data: signedMessage } = await signMessage({ message });
-      console.log('Signed Message:', signedMessage);
+      
+      // Call signMessage and directly use the returned signature
+      const signature = await signMessage({ message });
+      console.log('Signed Message:', signature);
+
       // Additional logic after signing
     } catch (error) {
       console.error('Error signing message:', error);
@@ -82,15 +85,25 @@ export default function CreateProposalForm() {
             <label className="label">
               <span className="label-text text-3xl text-white font-anton">
                 Distribution Channels
-              </span>
+                </span>
+          </label>
+          <div className="px-4">
+            <label className="label">
+              <span className="label-text">Television</span>
+              <input type="checkbox" className="checkbox" name="license" />
             </label>
-            <div className="px-4">
-              {/* Repeat this pattern for each distribution channel */}
-              <label className="label">
-                <span className="label-text">Television</span>
-                <input type="checkbox" className="checkbox" name="television" checked={distributionChannels.television} onChange={handleCheckboxChange} />
-              </label>
-              {/* ... Other distribution channels ... */}
+            <label className="label">
+              <span className="label-text">Movies</span>
+              <input type="checkbox" className="checkbox" name="license" />
+            </label>
+            <label className="label">
+              <span className="label-text">Books</span>
+              <input type="checkbox" className="checkbox" name="license" />
+            </label>
+            <label className="label">
+              <span className="label-text">Marketing</span>
+              <input type="checkbox" className="checkbox" name="license" />
+            </label>
             </div>
           </div>
         </div>

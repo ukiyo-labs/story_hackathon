@@ -1,4 +1,4 @@
-**IPSwap** is a platform under development on the Story Protocol ecosystem. The project was conceived and a proof of concept was developed at the Story Protocol Alpha Hackathon held from December 8th to 10th 2023. The development team comprised @jmnaywhere and @sahil-uddin, operating under the ukiyo Protocol umbrella.
+**IPSwap** is a platform under development on the Story Protocol ecosystem. The project was conceived and a proof of concept was developed at the Story Protocol Alpha Hackathon held from December 8th to 10th 2023. The development team comprised @jmanywhere and @sahil-uddin, operating under the ukiyo Protocol umbrella.
 
 ## Foundry
 
